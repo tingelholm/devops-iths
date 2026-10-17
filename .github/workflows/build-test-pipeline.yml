@@ -8,3 +8,6 @@ jobs:
     steps:
       - name: Say Hello
         run: echo "Hello from the pipeline"
+
+      - name: Run the Build Script
+        run: ./scripts/build.sh
