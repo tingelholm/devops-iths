@@ -6,8 +6,8 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
-        run: echo "Hello from the pipeline"
+      - name: Check Out the Code
+        uses: actions/checkout@v7
 
       - name: Run the Build Script
         run: ./scripts/build.sh
