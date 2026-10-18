@@ -12,9 +12,17 @@ jobs:
     steps:
       - name: Check Out the Code
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Run the Build Script
         run: ./scripts/build.sh
 
       - name: Run the Test Script
         run: ./scripts/test.sh
+
+
+      - name: Check the Commit Messages
+        run: ./scripts/check.commit-messages.sh
+        env:
+          BASE:REF: ${{ github.base_ref }}
