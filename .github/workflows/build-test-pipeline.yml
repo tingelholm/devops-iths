@@ -23,6 +23,6 @@ jobs:
 
 
       - name: Check the Commit Messages
-        run: ./scripts/check.commit-messages.sh
+        run: ./scripts/check-commit-messages.sh
         env:
           BASE:REF: ${{ github.base_ref }}
