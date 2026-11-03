@@ -1,8 +1,7 @@
 name: Build and Test Pipeline
 
 on: 
-  push:
-    branches: [main]
+  workflow_call:
   pull_request:
     branches: [main]
 
